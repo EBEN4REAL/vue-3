@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex justify-center">
     <input type="text" placeholder="Enter Pokemon here" class="mt-10 p-2 border-blue-500 border-2 mr-3" v-model="search" /> 
-    <input type="text" placeholder="Enter some notes here" class="mt-10 p-2 border-blue-500 border-2" v-model="notes" /> 
+    <!-- <input type="text" placeholder="Enter some notes here" class="mt-10 p-2 border-blue-500 border-2" v-model="notes" />  -->
   </div>
   <div class="mt-10 p-4 flex flex-wrap justify-center">
     <div class="text-2x ml-4 text-blue-500" v-for="(pokemon,idx) in filteredPokemons" :key="idx">

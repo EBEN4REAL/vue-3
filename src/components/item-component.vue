@@ -4,17 +4,17 @@
   </div>
 </template>
 <script>
-import {onMounted, reactive, toRefs, watch} from 'vue'
+import {defineComponent, onMounted, reactive, toRefs, watch} from 'vue'
 
 
-export default {
+export default defineComponent({
   props: {
     title: String,
   },  
   emits: ['getName', 'submit'],
   setup(props, ctx) {
     const state = reactive({
-      nameStr: "Eben"
+      nameStr: ""
     })
     watch(() => state.nameStr, (val) => {
       ctx.emit('getName', val)
@@ -26,5 +26,5 @@ export default {
     return {...toRefs(state)}
 
   }
-}
+})
 </script>
